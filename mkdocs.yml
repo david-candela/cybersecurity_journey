@@ -1,0 +1,80 @@
+site_name: David Candela — Cybersecurity Journey
+site_description: Documenting my transition into cybersecurity — labs, notes, and write-ups.
+site_author: David Candela Martínez
+site_url: https://david-candela.github.io/cybersecurity_journey/
+
+theme:
+  name: material
+  palette:
+    scheme: slate
+    primary: deep purple
+    accent: cyan
+  font:
+    text: Inter
+    code: Fira Code
+  icon:
+    logo: material/shield-lock
+    repo: fontawesome/brands/github
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.footer
+    - content.code.copy
+    - content.code.annotate
+    - search.suggest
+    - search.highlight
+    - toc.follow
+
+repo_url: https://github.com/david-candela/cybersecurity_journey
+repo_name: david-candela/cybersecurity_journey
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+  - tags
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/david-candela
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/david-candela-martinez/
+
+copyright: "&copy; 2026 David Candela Martínez"
+
+nav:
+  - Home: index.md
+  - TryHackMe:
+      - tryhackme/index.md
+      - Phishing Challenge 1: tryhackme/phishing-challenge-1.md
+  - Notes:
+      - notes/index.md
+      - Windows:
+          - PowerShell: notes/windows-powershell.md
+          - Command Line: notes/windows-command-line.md
+      - Linux:
+          - Linux Shells: notes/linux-shells.md
+  - Resources: resources/index.md
