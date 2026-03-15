@@ -82,3 +82,9 @@ nav:
           - Linux Commands: notes/linux-commands.md
           - Linux Shells: notes/linux-shells.md
   - Resources: resources/index.md
+
+extra:
+  analytics:
+    provider: google
+    property: G-8ER2FJJT0M
+  
