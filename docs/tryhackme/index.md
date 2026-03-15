@@ -1,6 +1,6 @@
-# TryHackMe Write-Ups
+# TryHackMe Challenge Rooms Write-Ups
 
-Notes and write-ups from TryHackMe rooms I've completed. Each documents what I learned, the tools I used, and key takeaways.
+Notes and write-ups from TryHackMe challenge rooms I've completed. Each documents what I learned, the tools I used, and key takeaways.
 
 ---
 
@@ -13,4 +13,4 @@ Notes and write-ups from TryHackMe rooms I've completed. Each documents what I l
 ---
 
 !!! info "Spoiler Policy"
-    My write-ups focus on methodology and learning — not on giving away answers. I want to document my thought process without ruining the challenge for others.
+    My write-ups focus on learning, not on giving away answers. I want to document my thought process without ruining the challenge for others.
