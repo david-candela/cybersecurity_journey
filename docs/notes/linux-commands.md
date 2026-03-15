@@ -1,6 +1,6 @@
 # Linux Commands
 
-A reference guide for essential Linux commands — from file navigation to process management, user administration, and networking.
+A reference guide for Linux commands: file navigation, process management, user administration, and networking.
 
 ---
 
@@ -9,7 +9,7 @@ A reference guide for essential Linux commands — from file navigation to proce
 | Command | Description |
 |---|---|
 | `man <command>` | Open the manual page for a command |
-| `whatis <command>` | Display a one-line description of a command |
+| `whatis <command>` | Display a one line description of a command |
 | `apropos <keyword>` | Search manual pages for a keyword |
 | `<command> --help` | Quick help for a command |
 
@@ -27,7 +27,7 @@ apropos -a change password  # search for commands related to changing passwords
 | Command | Description |
 |---|---|
 | `ls` | List directory contents |
-| `ls -l` | Long format — shows permissions, owner, size, date |
+| `ls -l` | Long format, shows permissions, owner, size, date |
 | `ls -a` | Show all files including hidden |
 | `ls -la` | Long format + hidden files |
 | `pwd` | Print working directory |
@@ -104,7 +104,7 @@ find /home/analyst/projects -name "*log*"
 | `>>` | Redirect output to a file (appends) |
 | `2>` | Redirect error messages (stderr) |
 | `/dev/null` | Discard output (the "dark void") |
-| `\|` | Pipe — send output of one command as input to another |
+| `\|` | Pipe, send output of one command as input to another |
 
 ```bash
 echo "hello" > output.txt       # write to file
@@ -113,8 +113,7 @@ ps -ef | grep Chrome            # pipe process list into grep
 ```
 
 !!! info "Piping"
-    The `|` symbol sends the output of the command on the left as input to the command on the right. This is one of the most powerful concepts in Linux.
-
+    The `|` symbol sends the output of the command on the left as input to the command on the right.
 ---
 
 ## Users and Groups
