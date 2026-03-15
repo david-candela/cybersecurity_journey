@@ -14,7 +14,7 @@ Transitioning into cybersecurity after 13 years at Apple
 - **SOC Analyst Level 1 (SAL1) Certification** — In progress
 - **Cyber Security 101 (SEC1) Certification** - In Progress
 - **Splunk Fundamentals** — Building SIEM skills
-- **Building my own GitHub repository
+- **Building my own GitHub repository** - Security portfolio
 
 ---
 
