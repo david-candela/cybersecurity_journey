@@ -2,6 +2,8 @@
 
 Notes and write-ups from TryHackMe challenge rooms I've completed. Each documents what I learned, the tools I used, and key takeaways.
 
+<img src="https://tryhackme-badges.s3.amazonaws.com/Recluta.png" alt="TryHackMe Badge" />
+
 ---
 
 ## Completed Rooms
