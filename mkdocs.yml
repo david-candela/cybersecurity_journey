@@ -79,5 +79,6 @@ nav:
           - PowerShell: notes/windows-powershell.md
           - Command Line: notes/windows-command-line.md
       - Linux:
+          - Linux Commands: notes/linux-commands.md
           - Linux Shells: notes/linux-shells.md
   - Resources: resources/index.md
