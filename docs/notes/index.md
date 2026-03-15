@@ -11,8 +11,8 @@ Personal reference notes on tools, commands, and concepts I encounter during my 
 
 ## Linux
 
-- [Linux Shells](linux-shells.md) — Bash, common commands, and scripting basics *(coming soon)*
-
+- [Linux Commands](linux-commands.md) — File management, users, processes, networking, and more
+- [Linux Shells](linux-shells.md) — Bash, common commands, and scripting basics *(in progress)*
 ---
 
 !!! info "How I Take Notes"
