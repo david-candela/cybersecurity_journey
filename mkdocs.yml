@@ -81,8 +81,8 @@ nav:
           - Command Line: notes/windows-command-line.md
           
       - **Security Tools**:
-          - Tcpdump: notes/Tcpdump.md
           - Nmap: notes/Nmap.md
+          - Tcpdump: notes/Tcpdump.md
           
   - Resources: resources/index.md
 
