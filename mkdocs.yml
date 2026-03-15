@@ -72,15 +72,18 @@ nav:
       - Phishing Challenge 1: tryhackme/phishing-challenge-1.md
   - Notes:
       - notes/index.md
-      - Security Tools:
-          - Tcpdump: notes/Tcpdump.md
-          - Nmap: notes/Nmap.md
-      - Windows:
-          - PowerShell: notes/windows-powershell.md
-          - Command Line: notes/windows-command-line.md
-      - Linux:
+       - **Linux**:
           - Linux Commands: notes/linux-commands.md
           - Linux Shells: notes/linux-shells.md
+          
+      - **Windows**:
+          - PowerShell: notes/windows-powershell.md
+          - Command Line: notes/windows-command-line.md
+          
+      - **Security Tools**:
+          - Tcpdump: notes/Tcpdump.md
+          - Nmap: notes/Nmap.md
+          
   - Resources: resources/index.md
 
 extra:
