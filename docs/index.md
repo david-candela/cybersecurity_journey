@@ -20,14 +20,31 @@ Transitioning into cybersecurity after 13 years at Apple
 
 ## :scroll: Certifications
 
-| Certification | Issuer | Date |
-|---|---|---|
-| CompTIA Security+ | CompTIA | 2025 |
-| Certified in Cybersecurity (CC) | ISC2 | 2025 |
-| Google Cybersecurity Professional Certificate | Coursera | 2024 |
-| Google IT Support Professional Certificate | Coursera | 2023 |
-| Cyber Security 101 (SEC1) | TryHackMe | *In Progress* |
-| SOC Analyst Level 1 (SAL1) | TryHackMe | *In Progress* |
+<div class="cert-grid">
+
+  <div class="cert-card">
+    <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="988be3cb-45ba-4480-8a01-551e8506ba6b" data-share-badge-host="https://www.credly.com"></div>
+    <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+  </div>
+
+  <div class="cert-card">
+    <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="cd872f20-7816-4940-8ea5-dd5fc53d31db" data-share-badge-host="https://www.credly.com"></div>
+    <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+  </div>
+
+  <div class="cert-card">
+    <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="a6702b53-7b5a-4cae-a5c0-691f7ff515c6" data-share-badge-host="https://www.credly.com"></div>
+    <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+  </div>
+
+  <div class="cert-card">
+    <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="e9223e7e-f067-4445-8989-82694ae98954" data-share-badge-host="https://www.credly.com"></div>
+    <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+  </div>
+
+</div>
+
+*In Progress: Cyber Security 101 (SEC1) · SOC Analyst Level 1 (SAL1) — TryHackMe*
 
 ---
 
@@ -42,31 +59,36 @@ Transitioning into cybersecurity after 13 years at Apple
 ### March 2026
 
 - Build up from the ground up this site using MkDocs and my GitHub repository.
-- Trained with Nmap, Tcpdump and Wireshark tools. 
-- Completed the Computer Fundamentals, Netorking, Operating System Basics and Attack and Defenses THM modules. 
+- Trained with Nmap, Tcpdump and Wireshark tools.
+- Completed the Computer Fundamentals, Netorking, Operating System Basics and Attack and Defenses THM modules.
 - Currently at 106 streak of days in TryHackMe.
+
 ---
 
 ## :hammer_and_wrench: Skills
 
-=== "Technical"
+<p class="skill-group-label">Technical</p>
+<div class="skill-pills">
+  <span class="skill-pill">SIEM (Splunk)</span>
+  <span class="skill-pill">Log Analysis</span>
+  <span class="skill-pill">Alert Triage</span>
+  <span class="skill-pill">Incident Response</span>
+  <span class="skill-pill">MITRE ATT&CK Framework</span>
+  <span class="skill-pill">Linux</span>
+  <span class="skill-pill">SQL</span>
+  <span class="skill-pill">Python</span>
+  <span class="skill-pill">Network Security</span>
+  <span class="skill-pill">Cryptography</span>
+</div>
 
-    - SIEM (Splunk)
-    - Log Analysis
-    - Alert Triage
-    - Incident Response
-    - MITRE ATT&CK Framework
-    - Linux, SQL, Python
-    - Network Security 
-    - Cryptography
-
-=== "Platforms & Tools"
-
-    - TryHackMe
-    - Splunk
-    - Wireshark
-    - Nmap
-    - Tcpdump
+<p class="skill-group-label">Platforms &amp; Tools</p>
+<div class="skill-pills">
+  <span class="skill-pill">TryHackMe</span>
+  <span class="skill-pill">Splunk</span>
+  <span class="skill-pill">Wireshark</span>
+  <span class="skill-pill">Nmap</span>
+  <span class="skill-pill">Tcpdump</span>
+</div>
 
 ---
 
@@ -75,7 +97,9 @@ Transitioning into cybersecurity after 13 years at Apple
 - [:fontawesome-brands-linkedin: LinkedIn](https://www.linkedin.com/in/david-candela-martinez/)
 - :material-email: davidcandelamartinez@icloud.com
 
-<img src="https://tryhackme-badges.s3.amazonaws.com/Recluta.png" alt="TryHackMe Badge" />
+<div class="thm-badge-card">
+  <img src="https://tryhackme-badges.s3.amazonaws.com/Recluta.png" alt="TryHackMe Badge" />
+</div>
 
 ---
 

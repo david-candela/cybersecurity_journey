@@ -1,0 +1,326 @@
+/* ── Google Fonts ── */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap');
+
+/* ── Colour palette ── */
+:root {
+  --cream:        #FAF7F2;
+  --cream-mid:    #F0EBE1;
+  --cream-border: #DDD5C8;
+  --charcoal:     #2C2C2C;
+  --charcoal-soft:#4A4A4A;
+  --orange:       #C96B3A;
+  --orange-dark:  #A5522B;
+  --lavender:     #C4B8D4;
+  --coral:        #E07A65;
+}
+
+/* ── Override Material slate scheme ── */
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color:           #FAF7F2;
+  --md-default-bg-color--light:    #FAF7F2;
+  --md-default-bg-color--lighter:  #FFFFFF;
+  --md-default-bg-color--lightest: #FFFFFF;
+  --md-default-fg-color:           #2C2C2C;
+  --md-default-fg-color--light:    rgba(44, 44, 44, 0.75);
+  --md-default-fg-color--lighter:  rgba(44, 44, 44, 0.45);
+  --md-default-fg-color--lightest: rgba(44, 44, 44, 0.15);
+  --md-primary-fg-color:           #C96B3A;
+  --md-primary-fg-color--light:    #D4845A;
+  --md-primary-fg-color--dark:     #A5522B;
+  --md-primary-bg-color:           #FFFFFF;
+  --md-primary-bg-color--light:    rgba(255, 255, 255, 0.7);
+  --md-accent-fg-color:            #C96B3A;
+  --md-accent-fg-color--transparent: rgba(201, 107, 58, 0.1);
+  --md-accent-bg-color:            #FFFFFF;
+  --md-typeset-color:              #2C2C2C;
+  --md-typeset-a-color:            #C96B3A;
+  --md-code-bg-color:              #F0EBE1;
+  --md-code-fg-color:              #2C2C2C;
+  --md-code-hl-color:              rgba(201, 107, 58, 0.15);
+  --md-shadow-z1: 0 0.2rem 0.5rem rgba(0,0,0,0.06), 0 0 0.05rem rgba(0,0,0,0.12);
+  --md-shadow-z2: 0 0.4rem 1rem  rgba(0,0,0,0.08), 0 0 0.1rem  rgba(0,0,0,0.1);
+  --md-shadow-z3: 0 0.8rem 2rem  rgba(0,0,0,0.10), 0 0 0.1rem  rgba(0,0,0,0.1);
+}
+
+/* ── Typography ── */
+body,
+.md-typeset {
+  font-family: 'DM Sans', sans-serif;
+  color: #2C2C2C;
+}
+
+.md-typeset h1,
+.md-typeset h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: #2C2C2C;
+  letter-spacing: -0.01em;
+}
+
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6 {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  color: #2C2C2C;
+}
+
+/* ── Layout backgrounds ── */
+.md-main,
+.md-main__inner,
+.md-content,
+.md-content__inner {
+  background-color: #FAF7F2;
+}
+
+.md-sidebar,
+.md-sidebar__scrollwrap,
+.md-sidebar__inner {
+  background-color: #FAF7F2;
+}
+
+/* ── Header ── */
+.md-header {
+  background-color: #2C2C2C;
+  color: #FAF7F2;
+  box-shadow: 0 1px 0 rgba(201, 107, 58, 0.3);
+}
+
+.md-header__title {
+  color: #FAF7F2;
+}
+
+/* ── Navigation tabs ── */
+.md-tabs {
+  background-color: #2C2C2C;
+  border-bottom: 1px solid rgba(201, 107, 58, 0.25);
+}
+
+.md-tabs__link {
+  color: rgba(250, 247, 242, 0.7);
+}
+
+.md-tabs__link--active,
+.md-tabs__link:hover {
+  color: #FAF7F2;
+}
+
+.md-tabs__indicator {
+  background-color: #C96B3A;
+}
+
+/* ── Sidebar navigation ── */
+.md-nav__title {
+  color: #2C2C2C;
+  font-weight: 600;
+}
+
+.md-nav__link {
+  color: #4A4A4A;
+}
+
+.md-nav__link:hover,
+.md-nav__link:focus {
+  color: #C96B3A;
+}
+
+.md-nav__item--active > .md-nav__link {
+  color: #C96B3A;
+  font-weight: 500;
+}
+
+/* ── Footer ── */
+.md-footer {
+  background-color: #2C2C2C;
+  color: rgba(250, 247, 242, 0.7);
+}
+
+.md-footer-meta {
+  background-color: #1E1E1E;
+}
+
+/* ── Links ── */
+.md-typeset a {
+  color: #C96B3A;
+}
+
+.md-typeset a:hover {
+  color: #A5522B;
+}
+
+/* ── Horizontal rules — warm orange accent ── */
+.md-typeset hr {
+  border: none;
+  border-top: 1px solid rgba(201, 107, 58, 0.35);
+  margin: 2rem 0;
+}
+
+/* ── Tables ── */
+.md-typeset table:not([class]) {
+  border: 1px solid #DDD5C8;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.md-typeset table:not([class]) th {
+  background-color: #F0EBE1;
+  color: #2C2C2C;
+  font-weight: 600;
+  border-bottom: 1px solid #DDD5C8;
+}
+
+.md-typeset table:not([class]) td {
+  border-color: #DDD5C8;
+  color: #2C2C2C;
+}
+
+.md-typeset table:not([class]) tr:hover {
+  background-color: rgba(201, 107, 58, 0.05);
+}
+
+/* ── Code ── */
+.md-typeset code {
+  background-color: #F0EBE1;
+  color: #A5522B;
+  border-radius: 4px;
+}
+
+.md-typeset pre > code {
+  color: #2C2C2C;
+}
+
+.md-typeset .highlight pre,
+.md-typeset pre {
+  background-color: #F0EBE1;
+}
+
+/* ── Admonitions ── */
+.md-typeset .admonition,
+.md-typeset details {
+  border-left-color: #C96B3A;
+  background-color: rgba(201, 107, 58, 0.06);
+}
+
+.md-typeset .admonition-title,
+.md-typeset summary {
+  background-color: rgba(201, 107, 58, 0.12);
+  color: #A5522B;
+}
+
+.md-typeset .admonition-title::before,
+.md-typeset summary::before {
+  color: #C96B3A;
+}
+
+/* ── Search ── */
+.md-search__input {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: #FAF7F2;
+}
+
+.md-search__input::placeholder {
+  color: rgba(250, 247, 242, 0.5);
+}
+
+.md-search-result {
+  background-color: #FAF7F2;
+}
+
+.md-search-result__article {
+  background-color: #FAF7F2;
+}
+
+/* ─────────────────────────────────────────
+   CUSTOM COMPONENTS
+   ───────────────────────────────────────── */
+
+/* ── Certification Grid ── */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  justify-items: center;
+  margin: 1.5rem 0 1rem;
+}
+
+@media (max-width: 900px) {
+  .cert-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .cert-grid { grid-template-columns: 1fr; }
+}
+
+.cert-card {
+  background-color: #FAF7F2;
+  border: 1px solid #DDD5C8;
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+  width: 100%;
+}
+
+.cert-card:hover {
+  border-color: rgba(201, 107, 58, 0.4);
+  box-shadow: 0 4px 16px rgba(201, 107, 58, 0.12);
+}
+
+/* ── Skill Pills ── */
+.skill-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.5rem 0 1.5rem;
+}
+
+.skill-pill {
+  display: inline-block;
+  background-color: #F0EBE1;
+  color: #2C2C2C;
+  border: 1px solid #DDD5C8;
+  border-radius: 999px;
+  padding: 0.3rem 0.9rem;
+  font-size: 0.85em;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.skill-pill:hover {
+  background-color: rgba(201, 107, 58, 0.1);
+  border-color: rgba(201, 107, 58, 0.4);
+}
+
+.skill-group-label {
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 0.78em !important;
+  font-weight: 600 !important;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: #C96B3A !important;
+  margin: 1.25rem 0 0 !important;
+  padding: 0 !important;
+}
+
+/* ── TryHackMe Badge Card ── */
+.thm-badge-card {
+  display: inline-block;
+  background-color: #F0EBE1;
+  border: 1px solid #DDD5C8;
+  border-radius: 12px;
+  padding: 1.25rem 1.75rem;
+  margin: 0.75rem 0 1rem;
+  text-align: center;
+}
+
+.thm-badge-card img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}

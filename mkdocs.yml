@@ -27,6 +27,9 @@ theme:
     - search.highlight
     - toc.follow
 
+extra_css:
+  - stylesheets/extra.css
+
 repo_url: https://github.com/david-candela/cybersecurity_journey
 repo_name: david-candela/cybersecurity_journey
 
@@ -62,6 +65,9 @@ extra:
       link: https://github.com/david-candela
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/david-candela-martinez/
+  analytics:
+    provider: google
+    property: G-8ER2FJJT0M
 
 copyright: "&copy; 2026 David Candela Martínez"
 
@@ -77,15 +83,8 @@ nav:
           - Linux Shells: notes/linux-shells.md
       - Windows:
           - PowerShell: notes/windows-powershell.md
-          - Command Line: notes/windows-command-line.md    
+          - Command Line: notes/windows-command-line.md
       - Security Tools:
           - Nmap: notes/Nmap.md
           - Tcpdump: notes/Tcpdump.md
-          
   - Resources: resources/index.md
-
-extra:
-  analytics:
-    provider: google
-    property: G-8ER2FJJT0M
-  
