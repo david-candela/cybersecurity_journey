@@ -10,7 +10,6 @@ Notes and write-ups from TryHackMe challenge rooms I've completed. Each document
 
 | Room | Difficulty | Date | Focus |
 |---|---|---|---|
-| [John the Ripper](john-the-ripper.md) | | 09/04/2026 | |
 | [Phishing Challenge 1](phishing-challenge-1.md) | :green_circle: Easy | 27/01/2025 | Phishing analysis, CTI tooling |
 
 ---
