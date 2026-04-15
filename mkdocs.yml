@@ -76,6 +76,7 @@ nav:
   - TryHackMe:
       - tryhackme/index.md
       - Phishing Challenge 1: tryhackme/phishing-challenge-1.md
+      - MITRE ATT&CK Framework: tryhackme/MITRE.md
   - Notes:
       - notes/index.md
       - Linux:
