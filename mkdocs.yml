@@ -30,6 +30,9 @@ theme:
 extra_css:
   - stylesheets/extra.css
 
+extra_javascript:
+  - javascripts/cv-header.js
+
 repo_url: https://github.com/david-candela/cybersecurity_journey
 repo_name: david-candela/cybersecurity_journey
 
