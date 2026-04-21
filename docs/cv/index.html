@@ -506,32 +506,6 @@
     padding-top: 1px;
   }
 
-  /* ── Tweaks ── */
-  #tweaks-panel {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 18px 20px;
-    width: 220px;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
-    z-index: 1000;
-    display: none;
-    flex-direction: column;
-    gap: 14px;
-    font-size: 13px;
-  }
-  #tweaks-panel.visible { display: flex; }
-  #tweaks-panel h4 { font-size: 12px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
-
-  .tweak-row { display: flex; flex-direction: column; gap: 5px; }
-  .tweak-row label { font-size: 12px; color: var(--muted); }
-  .tweak-row input[type=range] { width: 100%; accent-color: var(--accent); }
-  .tweak-row select { width: 100%; padding: 4px 6px; border: 1px solid var(--border); border-radius: 6px; font-family: var(--font); font-size: 12px; background: var(--bg); color: var(--text); }
-  .tweak-row input[type=color] { width: 32px; height: 24px; border: 1px solid var(--border); border-radius: 4px; padding: 1px; cursor: pointer; }
-
   /* Loading spinner */
   .cert-loading {
     width: 24px; height: 24px;
@@ -799,66 +773,7 @@
   <canvas id="lightbox-canvas"></canvas>
 </div>
 
-<!-- Tweaks Panel -->
-<div id="tweaks-panel" class="visible">
-  <h4>Tweaks</h4>
-  <div class="tweak-row">
-    <label>Background tone</label>
-    <select onchange="applyTweak('bg', this.value)">
-      <option value="#f7f6f3">Warm parchment</option>
-      <option value="#f5f7f9">Cool white</option>
-      <option value="#f9f9f9">Pure white</option>
-      <option value="#1c1c1e" data-dark="1">Dark mode</option>
-    </select>
-  </div>
-  <div class="tweak-row">
-    <label>Max width</label>
-    <input type="range" min="500" max="900" value="680" step="20" oninput="applyTweak('width', this.value)">
-  </div>
-  <div class="tweak-row">
-    <label>Font size</label>
-    <input type="range" min="12" max="18" value="14" step="0.5" oninput="applyTweak('fontSize', this.value)">
-  </div>
-</div>
-
 <script>
-// ── Tweaks ──────────────────────────────────────────────
-const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
-  "bg": "#f7f6f3",
-  "width": 680,
-  "fontSize": 14
-}/*EDITMODE-END*/;
-
-function applyTweak(key, val) {
-  if (key === 'bg') {
-    const dark = val === '#1c1c1e';
-    document.documentElement.style.setProperty('--bg', val);
-    document.documentElement.style.setProperty('--card', dark ? '#2c2c2e' : '#fff');
-    document.documentElement.style.setProperty('--text', dark ? '#f2f2f0' : '#1c1c1c');
-    document.documentElement.style.setProperty('--border', dark ? '#3a3a3c' : '#e8e7e3');
-    document.documentElement.style.setProperty('--tag-bg', dark ? '#3a3a3c' : '#f0efec');
-    document.documentElement.style.setProperty('--muted', dark ? '#8a8a88' : '#9a9a96');
-  }
-  if (key === 'width') document.querySelector('.page').style.maxWidth = val + 'px';
-  if (key === 'fontSize') document.documentElement.style.fontSize = val + 'px';
-  window.parent.postMessage({type: '__edit_mode_set_keys', edits: {[key]: val}}, '*');
-}
-
-// Apply saved tweaks
-(function() {
-  const t = TWEAK_DEFAULTS;
-  if (t.bg !== '#f7f6f3') applyTweak('bg', t.bg);
-  if (t.width !== 680) applyTweak('width', t.width);
-  if (t.fontSize !== 14) applyTweak('fontSize', t.fontSize);
-})();
-
-window.addEventListener('message', e => {
-  if (e.data?.type === '__activate_edit_mode') document.getElementById('tweaks-panel').classList.add('visible');
-  if (e.data?.type === '__deactivate_edit_mode') document.getElementById('tweaks-panel').classList.remove('visible');
-});
-window.parent.postMessage({type: '__edit_mode_available'}, '*');
-
-
 // ── Experience modals ────────────────────────────────────
 const jobs = {
   job1: {
