@@ -12,6 +12,8 @@ Notes and write-ups from TryHackMe challenge rooms I've completed. Each document
 |---|---|---|---|
 | [Phishing Challenge 1](phishing-challenge-1.md) | :green_circle: Easy | 27/01/2025 | Phishing analysis, CTI tooling |
 | [MITRE ATT&CK Framework](MITRE.md) | :green_circle: Easy | 15/04/2026 | ATT&CK, threat profiling, D3FEND |
+| [Blue](blue.md) | :green_circle: Easy | 26/04/2026 | Deploy & hack into a Windows machine |
+
 
 ---
 
