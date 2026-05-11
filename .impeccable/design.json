@@ -1,0 +1,190 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-05-11T00:00:00Z",
+  "title": "Design System: David Candela — Cybersecurity Journey",
+  "extensions": {
+    "colorMeta": {
+      "harvest-mark": {
+        "role": "primary",
+        "displayName": "Harvest Mark",
+        "canonical": "oklch(58% 0.15 46)",
+        "tonalRamp": ["#2a0e00", "#531900", "#7a2c00", "#9c4217", "#bf6330", "#d9875a", "#edb898", "#f9dfd0"]
+      },
+      "harvest-mark-deep": {
+        "role": "primary-deep",
+        "displayName": "Harvest Mark Deep",
+        "canonical": "oklch(47% 0.13 43)",
+        "tonalRamp": ["#1a0800", "#3d1200", "#60200a", "#833019", "#a5522b", "#c07650", "#d9a882", "#f0d8c4"]
+      },
+      "harvest-mark-light": {
+        "role": "primary-light",
+        "displayName": "Harvest Mark Light",
+        "canonical": "oklch(65% 0.12 46)",
+        "tonalRamp": ["#2a0e00", "#571c00", "#833109", "#ab4d22", "#d4845a", "#e4aa88", "#f0c8aa", "#fae4d6"]
+      },
+      "warm-cream": {
+        "role": "neutral-bg",
+        "displayName": "Warm Cream",
+        "canonical": "oklch(97.5% 0.007 75)",
+        "tonalRamp": ["#3a3228", "#5e5246", "#837666", "#a89b87", "#c4b9a5", "#ddd5c8", "#f0ebe1", "#faf7f2"]
+      },
+      "warm-cream-mid": {
+        "role": "neutral-surface",
+        "displayName": "Warm Cream Mid",
+        "canonical": "oklch(93% 0.01 75)",
+        "tonalRamp": ["#3a3228", "#5e5246", "#837666", "#a89b87", "#c4b9a5", "#ddd5c8", "#f0ebe1", "#faf7f2"]
+      },
+      "warm-cream-border": {
+        "role": "neutral-border",
+        "displayName": "Warm Cream Border",
+        "canonical": "oklch(85% 0.01 75)",
+        "tonalRamp": ["#3a3228", "#5e5246", "#7a6e60", "#9e9282", "#bdb3a4", "#ddd5c8", "#eee8df", "#f8f5f0"]
+      },
+      "charcoal": {
+        "role": "neutral-text",
+        "displayName": "Charcoal",
+        "canonical": "oklch(22% 0.003 60)",
+        "tonalRamp": ["#0a0908", "#1c1a18", "#2c2c2c", "#474744", "#6b6b68", "#959592", "#bebebc", "#e0e0de"]
+      },
+      "charcoal-soft": {
+        "role": "neutral-text-secondary",
+        "displayName": "Charcoal Soft",
+        "canonical": "oklch(33% 0.003 60)",
+        "tonalRamp": ["#0a0908", "#1c1a18", "#2c2c2c", "#4a4a4a", "#6b6b68", "#959592", "#bebebc", "#e0e0de"]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Page and section H1 headers. Playfair Display only. Used once per major section, never stacked."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "H2 section anchors within content. Playfair Display only."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Default reading rhythm. DM Sans. Max line length 65-75ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Category markers, skill group headings, meta text. The only uppercase treatment in the system."
+      },
+      "code": {
+        "displayName": "Code",
+        "purpose": "Inline and block code. Fira Code."
+      }
+    },
+    "shadows": [
+      {
+        "name": "ambient-low",
+        "value": "0 0.2rem 0.5rem rgba(0,0,0,0.06), 0 0 0.05rem rgba(0,0,0,0.12)",
+        "purpose": "Cards and containers on hover. Lowest visible elevation signal."
+      },
+      {
+        "name": "ambient-mid",
+        "value": "0 0.4rem 1rem rgba(0,0,0,0.08), 0 0 0.1rem rgba(0,0,0,0.1)",
+        "purpose": "Modal or sheet surfaces. Focussed interactive cards."
+      },
+      {
+        "name": "ambient-high",
+        "value": "0 0.8rem 2rem rgba(0,0,0,0.10), 0 0 0.1rem rgba(0,0,0,0.1)",
+        "purpose": "Topmost elevated overlay. Reserved for surfaces that must visually float above content."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-standard",
+        "value": "cubic-bezier(0.2, 0, 0, 1)",
+        "purpose": "Default easing for all state transitions. Ease-out-quart feel."
+      }
+    ],
+    "breakpoints": [
+      { "name": "mobile", "value": "480px" },
+      { "name": "tablet", "value": "900px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Skill Pill",
+      "kind": "chip",
+      "refersTo": "skill-pill",
+      "description": "Scannable competency tag. Fully rounded, compact, hover-highlighted with the Harvest Mark tint.",
+      "html": "<div class=\"ds-pill-group\"><p class=\"ds-pill-label\">Technical</p><div class=\"ds-pills\"><span class=\"ds-pill\">SIEM (Splunk)</span><span class=\"ds-pill\">Log Analysis</span><span class=\"ds-pill\">Alert Triage</span><span class=\"ds-pill\">Python</span></div></div>",
+      "css": ".ds-pill-group { font-family: 'DM Sans', system-ui, sans-serif; } .ds-pill-label { font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.09em; color: #C96B3A; margin: 0 0 0.5rem 0; padding: 0; } .ds-pills { display: flex; flex-wrap: wrap; gap: 0.5rem; } .ds-pill { display: inline-block; background-color: #F0EBE1; color: #2C2C2C; border: 1px solid #DDD5C8; border-radius: 999px; padding: 0.3rem 0.9rem; font-size: 0.85em; font-weight: 500; white-space: nowrap; cursor: default; transition: background-color 0.15s ease, border-color 0.15s ease; } .ds-pill:hover { background-color: rgba(201,107,58,0.1); border-color: rgba(201,107,58,0.4); }"
+    },
+    {
+      "name": "Certification Card",
+      "kind": "card",
+      "refersTo": "cert-card",
+      "description": "Clean frame for external badge embeds. Warm cream surface, border at rest, Harvest Mark shadow on hover.",
+      "html": "<div class=\"ds-cert-card\"><div class=\"ds-cert-placeholder\">Credly Badge</div></div>",
+      "css": ".ds-cert-card { background-color: #FAF7F2; border: 1px solid #DDD5C8; border-radius: 12px; padding: 1rem; display: flex; align-items: center; justify-content: center; transition: box-shadow 0.2s ease, border-color 0.2s ease; width: 180px; min-height: 120px; font-family: 'DM Sans', system-ui, sans-serif; } .ds-cert-card:hover { border-color: rgba(201,107,58,0.4); box-shadow: 0 0.2rem 0.5rem rgba(0,0,0,0.06), 0 0 0.05rem rgba(0,0,0,0.12); } .ds-cert-placeholder { color: #4A4A4A; font-size: 0.85rem; font-weight: 500; }"
+    },
+    {
+      "name": "CV Header Link",
+      "kind": "button",
+      "refersTo": "cv-header-link",
+      "description": "Inline header button for CV download. Transparent with Harvest Mark border on charcoal background.",
+      "html": "<header class=\"ds-header-demo\"><span class=\"ds-header-title\">David Candela</span><a class=\"ds-cv-link\" href=\"#\">Download CV</a></header>",
+      "css": ".ds-header-demo { background-color: #2C2C2C; display: flex; align-items: center; justify-content: space-between; padding: 0.6rem 1rem; border-bottom: 1px solid rgba(201,107,58,0.3); font-family: 'DM Sans', system-ui, sans-serif; } .ds-header-title { color: #FAF7F2; font-size: 0.9rem; font-weight: 600; } .ds-cv-link { display: inline-flex; align-items: center; padding: 0.25rem 0.7rem; color: #FAF7F2; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.03em; border: 1px solid rgba(201,107,58,0.55); border-radius: 4px; text-decoration: none; white-space: nowrap; transition: border-color 0.2s ease, background-color 0.2s ease; } .ds-cv-link:hover { border-color: #C96B3A; background-color: rgba(201,107,58,0.18); }"
+    },
+    {
+      "name": "Navigation Tab Strip",
+      "kind": "nav",
+      "refersTo": null,
+      "description": "Top-level navigation tabs on charcoal. Active state marked by Harvest Mark indicator.",
+      "html": "<nav class=\"ds-tabs\"><a class=\"ds-tab-link ds-tab-active\" href=\"#\">Home</a><a class=\"ds-tab-link\" href=\"#\">TryHackMe</a><a class=\"ds-tab-link\" href=\"#\">Notes</a><a class=\"ds-tab-link\" href=\"#\">Resources</a></nav>",
+      "css": ".ds-tabs { background-color: #2C2C2C; border-bottom: 1px solid rgba(201,107,58,0.25); display: flex; gap: 0; padding: 0 1rem; font-family: 'DM Sans', system-ui, sans-serif; } .ds-tab-link { display: inline-block; padding: 0.65rem 1rem; color: rgba(250,247,242,0.7); font-size: 0.85rem; font-weight: 500; text-decoration: none; border-bottom: 2px solid transparent; transition: color 0.15s ease, border-color 0.15s ease; } .ds-tab-link:hover { color: #FAF7F2; } .ds-tab-active { color: #FAF7F2; border-bottom-color: #C96B3A; }"
+    },
+    {
+      "name": "Inline Code",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Inline code spans. Warm Cream Mid background, Harvest Mark Deep text. Warm and readable, not clinical.",
+      "html": "<p class=\"ds-body\">Run <code class=\"ds-code\">nmap -sV -p-</code> against the target for a full port scan.</p>",
+      "css": ".ds-body { font-family: 'DM Sans', system-ui, sans-serif; font-size: 1rem; color: #2C2C2C; line-height: 1.65; } .ds-code { background-color: #F0EBE1; color: #A5522B; border-radius: 4px; padding: 0.1em 0.35em; font-family: 'Fira Code', Menlo, monospace; font-size: 0.9em; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Craft Record",
+    "overview": "This system belongs to someone who spent 13 years at Apple and brought that standard with them. It does not announce itself. The cream backgrounds, the disciplined type scale, the single accent color held in reserve: every decision reflects the same principle as the content itself. The work is the credential. The design is the proof of care.\n\nThe palette is warm and physical, not digital-clinical. Playfair Display handles section headers with authoritative weight; DM Sans handles the body and UI with clean utility. The Harvest Mark orange is the only saturated voice. On any given screen it covers 8-12% of the surface. Its rarity is load-bearing.\n\nThis system explicitly rejects the generic dark hacker aesthetic: Matrix green on black, terminal-green glows, neon on dark.",
+    "keyCharacteristics": [
+      "Light warm-cream surface, not white",
+      "Single orange accent, used at controlled density",
+      "Serif display + sans utility pairing",
+      "Flat by default; shadow only on interactive state change",
+      "Uppercase-tracked labels as the only typographic ornamentation",
+      "No gradients, no glassmorphism, no side-stripe borders"
+    ],
+    "rules": [
+      { "name": "The One Voice Rule", "body": "Harvest Mark is the only saturated color in the system. It appears on ≤12% of any screen. Its rarity is what makes it mean something.", "section": "colors" },
+      { "name": "The Warmth Rule", "body": "Never use pure white (#fff) or pure black (#000) as surfaces or text. The cream neutrals are tinted toward the brand hue. A pure-white background instantly breaks the register.", "section": "colors" },
+      { "name": "The Uppercase Limit Rule", "body": "Uppercase is only legal at label scale (0.78rem) with tracked letter-spacing (0.09em). Any uppercase element at body size or larger breaks the system's register.", "section": "typography" },
+      { "name": "The Serif Boundary Rule", "body": "Playfair Display is for H1 and H2 only. H3 and below use DM Sans. Allowing serif to bleed down the hierarchy dilutes the weight contrast the system relies on.", "section": "typography" },
+      { "name": "The Flat-By-Default Rule", "body": "A card at rest has no shadow. A border defines its edge. When the user hovers, Ambient Low appears. Static shadows are visual noise.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do use Harvest Mark (#C96B3A) as the single accent. Links, active states, the tab indicator, admonition icons.",
+      "Do keep Harvest Mark at ≤12% surface coverage per screen.",
+      "Do default every surface to Warm Cream (#FAF7F2), not white.",
+      "Do use Warm Cream Mid (#F0EBE1) for secondary surfaces: code blocks, pill backgrounds, table headers.",
+      "Do use Playfair Display for H1 and H2 only.",
+      "Do uppercase labels only at 0.78rem with 0.09em tracking.",
+      "Do keep surfaces flat at rest. Apply Ambient Low shadow only on hover or interactive state.",
+      "Do cap body line length at 65-75ch."
+    ],
+    "donts": [
+      "Don't use Matrix green, terminal-green, neon on dark, or any dark hacker aesthetic. This is the primary anti-reference.",
+      "Don't introduce a second saturated accent alongside Harvest Mark.",
+      "Don't use pure white (#fff) or pure black (#000) as surface or text values.",
+      "Don't add shadows to surfaces at rest.",
+      "Don't use gradient text (background-clip: text).",
+      "Don't use glassmorphism: frosted blur cards, translucent panels, backdrop-filter for decoration.",
+      "Don't place Playfair Display below H2.",
+      "Don't use uppercase at body size or larger.",
+      "Don't use a side-stripe border (border-left or border-right > 1px) as a colored accent on cards or callouts.",
+      "Don't present this as a resume template or revert to a corporate SaaS look."
+    ]
+  }
+}

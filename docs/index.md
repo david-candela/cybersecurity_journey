@@ -6,6 +6,8 @@
 CompTIA Security+ · ISC2 CC · Google Cybersecurity Certificate
 Transitioning into cybersecurity after 13 years at Apple
 
+[My CV →](cv/)
+
 ---
 
 ## Current Focus
@@ -67,7 +69,7 @@ Transitioning into cybersecurity after 13 years at Apple
 
 ## :hammer_and_wrench: Skills
 
-<p class="skill-group-label">Technical</p>
+<h3 class="skill-group-label">Technical</h3>
 <div class="skill-pills">
   <span class="skill-pill">SIEM (Splunk)</span>
   <span class="skill-pill">Log Analysis</span>
@@ -81,7 +83,7 @@ Transitioning into cybersecurity after 13 years at Apple
   <span class="skill-pill">Cryptography</span>
 </div>
 
-<p class="skill-group-label">Platforms &amp; Tools</p>
+<h3 class="skill-group-label">Platforms &amp; Tools</h3>
 <div class="skill-pills">
   <span class="skill-pill">TryHackMe</span>
   <span class="skill-pill">Splunk</span>
@@ -98,7 +100,7 @@ Transitioning into cybersecurity after 13 years at Apple
 - :material-email: davidcandelamartinez@icloud.com
 
 <div class="thm-badge-card">
-  <img src="https://tryhackme-badges.s3.amazonaws.com/Recluta.png" alt="TryHackMe Badge" />
+  <img src="https://tryhackme-badges.s3.amazonaws.com/Recluta.png" alt="TryHackMe Badge" loading="lazy" />
 </div>
 
 ---

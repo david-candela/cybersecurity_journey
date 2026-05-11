@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
   link.textContent = 'My CV';
   link.setAttribute('target', '_blank');
   link.setAttribute('rel', 'noopener noreferrer');
+  link.setAttribute('aria-label', 'My CV (opens in a new tab)');
 
   title.insertAdjacentElement('afterend', link);
 });
