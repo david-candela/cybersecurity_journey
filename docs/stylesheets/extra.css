@@ -360,6 +360,104 @@ body,
   border-radius: 4px;
 }
 
+/* ── Milestone Timeline ── */
+.milestone-timeline {
+  position: relative;
+  margin: 1.5rem 0 2rem;
+  padding-left: 1.75rem;
+}
+
+.milestone-timeline::before {
+  content: '';
+  position: absolute;
+  left: 0.45rem;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  width: 2px;
+  background-color: var(--cream-border);
+}
+
+.milestone-item {
+  position: relative; /* required: .milestone-dot is position:absolute, resolves against this */
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 1.1rem;
+}
+
+.milestone-dot {
+  position: absolute;
+  left: -1.75rem;
+  top: 0.35rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--cream-mid);
+  border: 2px solid var(--cream-border);
+  flex-shrink: 0;
+}
+
+.milestone-dot--current {
+  background-color: var(--orange);
+  border-color: var(--orange);
+  animation: milestone-pulse 2s ease-in-out infinite;
+}
+
+@keyframes milestone-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(201, 107, 58, 0.4); }
+  50%       { box-shadow: 0 0 0 5px rgba(201, 107, 58, 0); }
+}
+
+.milestone-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.05rem;
+}
+
+/* Without JS: immediately visible. With JS: starts hidden, fades in. */
+.milestone-content[data-animate]:not([data-visible]) {
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.milestone-content[data-animate][data-visible] {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.milestone-type-icon {
+  font-size: 0.85rem;
+  line-height: 1;
+  margin-bottom: 0.15rem;
+  color: var(--charcoal-soft);
+}
+
+.milestone-current .milestone-type-icon {
+  color: var(--orange);
+}
+
+.milestone-date {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--charcoal-soft);
+}
+
+.milestone-current .milestone-date {
+  color: var(--orange);
+}
+
+.milestone-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.92rem;
+  color: var(--charcoal);
+  line-height: 1.4;
+}
+
 /* ── Reduced motion ── */
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -368,5 +466,16 @@ body,
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+
+  .milestone-dot--current {
+    animation: none;
+  }
+
+  /* Keep elements visible regardless of JS state */
+  .milestone-content[data-animate]:not([data-visible]) {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }

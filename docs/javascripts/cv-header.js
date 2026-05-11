@@ -12,3 +12,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
   title.insertAdjacentElement('afterend', link);
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  if (!('IntersectionObserver' in window)) return;
+  var observer = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.setAttribute('data-visible', '');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
+  document.querySelectorAll('[data-animate]').forEach(function (el) {
+    observer.observe(el);
+  });
+});

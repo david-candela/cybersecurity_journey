@@ -3,20 +3,86 @@
 
 ---
 
-CompTIA Security+ · ISC2 CC · Google Cybersecurity Certificate
 Transitioning into cybersecurity after 13 years at Apple
 
 [My CV →](cv/)
 
 ---
 
-## Current Focus
+## :map: Journey
 
-- **TryHackMe SOC Level 1 Path** — Daily training
-- **SOC Analyst Level 1 (SAL1) Certification** — In progress
-- **Cyber Security 101 (SEC1) Certification** - In Progress
-- **Splunk Fundamentals** — Building SIEM skills
-- **Building my own GitHub repository** - Security portfolio
+<div class="milestone-timeline">
+
+  <div class="milestone-item milestone-cert">
+    <div class="milestone-dot"></div>
+    <div class="milestone-content" data-animate>
+      <span class="milestone-type-icon">🛡</span>
+      <span class="milestone-label">Google Cybersecurity Certificate</span>
+    </div>
+  </div>
+
+  <div class="milestone-item milestone-cert">
+    <div class="milestone-dot"></div>
+    <div class="milestone-content" data-animate>
+      <span class="milestone-type-icon">🛡</span>
+      <span class="milestone-label">ISC2 CC — Certified in Cybersecurity</span>
+    </div>
+  </div>
+
+  <div class="milestone-item milestone-cert">
+    <div class="milestone-dot"></div>
+    <div class="milestone-content" data-animate>
+      <span class="milestone-type-icon">🛡</span>
+      <span class="milestone-label">CompTIA Security+</span>
+    </div>
+  </div>
+
+  <div class="milestone-item milestone-milestone">
+    <div class="milestone-dot"></div>
+    <div class="milestone-content" data-animate>
+      <span class="milestone-type-icon">◆</span>
+      <span class="milestone-date">Jan 2026</span>
+      <span class="milestone-label">pawaTech Security Analyst interview</span>
+    </div>
+  </div>
+
+  <div class="milestone-item milestone-study">
+    <div class="milestone-dot"></div>
+    <div class="milestone-content" data-animate>
+      <span class="milestone-type-icon">📖</span>
+      <span class="milestone-date">Jan 2026</span>
+      <span class="milestone-label">Started SEC1 + SAL1 paths · Splunk training begun</span>
+    </div>
+  </div>
+
+  <div class="milestone-item milestone-tool">
+    <div class="milestone-dot"></div>
+    <div class="milestone-content" data-animate>
+      <span class="milestone-type-icon">🔧</span>
+      <span class="milestone-date">Mar 2026</span>
+      <span class="milestone-label">Nmap · Tcpdump · Wireshark hands-on</span>
+    </div>
+  </div>
+
+  <div class="milestone-item milestone-study">
+    <div class="milestone-dot"></div>
+    <div class="milestone-content" data-animate>
+      <span class="milestone-type-icon">📖</span>
+      <span class="milestone-date">Mar 2026</span>
+      <span class="milestone-label">THM: Computer Fundamentals · Networking · OS Basics · Attack &amp; Defense</span>
+    </div>
+  </div>
+
+  <div class="milestone-item milestone-current">
+    <div class="milestone-dot milestone-dot--current"></div>
+    <div class="milestone-content" data-animate>
+      <span class="milestone-type-icon">●</span>
+      <span class="milestone-date">Now</span>
+      <span class="milestone-label">SOC Level 1 Path · SAL1 · SEC1 — in progress</span>
+    </div>
+  </div>
+
+</div>
 
 ---
 
@@ -47,23 +113,6 @@ Transitioning into cybersecurity after 13 years at Apple
 </div>
 
 *In Progress: Cyber Security 101 (SEC1) · SOC Analyst Level 1 (SAL1) — TryHackMe*
-
----
-
-## :notebook: Learning Log
-
-### January 2026
-
-- Completed pawaTech Security Analyst interview. I received constructive feedback on building hands-on operational experience.
-- Started SEC1 and SAL1 certification path.
-- Began Splunk free training courses.
-
-### March 2026
-
-- Build up from the ground up this site using MkDocs and my GitHub repository.
-- Trained with Nmap, Tcpdump and Wireshark tools.
-- Completed the Computer Fundamentals, Netorking, Operating System Basics and Attack and Defenses THM modules.
-- Currently at 106 streak of days in TryHackMe.
 
 ---
 
@@ -108,4 +157,4 @@ Transitioning into cybersecurity after 13 years at Apple
 !!! quote "Why This Site?"
     This site documents my transition into cybersecurity. The wins, the challenges, and everything I learn along the way. If you're on a similar journey, feel free to connect.
 
-*Last updated: March 2026*
+*Last updated: May 2026*
