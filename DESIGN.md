@@ -8,7 +8,7 @@ colors:
   ink-deep: "#10151a"
   cream: "#f2ede7"
   cream-soft: "rgba(242, 237, 231, 0.72)"
-  cream-faint: "rgba(242, 237, 231, 0.48)"
+  cream-faint: "rgba(242, 237, 231, 0.55)"
   harvest-mark: "#C96B3A"
   harvest-mark-light: "#D4845A"
   harvest-mark-bright: "#E8B08A"
@@ -103,7 +103,8 @@ landing page.
 ### Text (cream scale)
 - **Cream** (#f2ede7): headings, primary emphasis.
 - **Cream Soft** (72% alpha): body copy.
-- **Cream Faint** (48% alpha): meta text, labels, captions.
+- **Cream Faint** (55% alpha): meta text, labels, captions. 5.3:1 on ink — do not go
+  fainter; 48% measured 4.36:1 and failed AA.
 
 ### Accent (the one voice)
 - **Harvest Mark** (#C96B3A): kickers, active indicators, the solid button, current-state dots.
@@ -134,13 +135,15 @@ accent, ever. Its rarity is what makes it mean something.
 
 Flat by default. Cards are defined by their hairline border and 3–7% white fill, not by
 shadow. Shadow appears on interaction only (hover lift: translateY(-2px) + 0 14px 32px
-rgba(0,0,0,0.35)). The stat tiles carry a whisper of ambient shadow at rest (0 8px 20px
-rgba(0,0,0,0.20)) because they sit inside the hero — that is the ceiling.
+rgba(0,0,0,0.35)). Nothing carries shadow at rest.
 
 ## 5. Components
 
-- **Glass card** (cert cards, stat tiles, THM badge): glass fill, 1px hairline, 12–14px
-  radius. In-progress variant: dashed copper border at 35% + pulsing 6px copper dot.
+- **Glass card** (cert cards, THM badge): glass fill, 1px hairline, 12–14px radius.
+- **Ledger lines** (hero facts, in-progress cert strip): the journal's native idiom for
+  facts. Hero facts = one DM Mono line, copper dot separators, hairline rules above and
+  below — never big-number-over-label stat tiles (banned hero-metric template). The cert
+  strip = one slim dashed-copper row with the pulsing live dot.
 - **Buttons:** pill (999px). Solid = copper fill, ink text. Ghost = 7% white fill, 16%
   white border, cream text; hover swaps to copper tint + copper border.
 - **Kicker + headline pattern:** every section opens with a DM Mono copper kicker

@@ -10,7 +10,7 @@
   --ink-deep:       #10151a;   /* header, footer, code blocks */
   --cream:          #f2ede7;   /* primary text, same as showcase */
   --cream-soft:     rgba(242, 237, 231, 0.72);
-  --cream-faint:    rgba(242, 237, 231, 0.48);
+  --cream-faint:    rgba(242, 237, 231, 0.55);  /* 5.3:1 on ink (AA) */
   --line:           rgba(242, 237, 231, 0.10);  /* structural borders */
   --line-soft:      rgba(255, 255, 255, 0.07);  /* card borders at rest */
   --glass:          rgba(255, 255, 255, 0.04);  /* card fill */
@@ -22,6 +22,11 @@
   --copper-edge:    rgba(201, 107, 58, 0.50);   /* hover borders */
   --shadow-card:    0 14px 32px rgba(0, 0, 0, 0.35);
   --ease-standard:  cubic-bezier(0.2, 0, 0, 1);
+
+  /* Fonts are self-managed (theme.font: false) — single Google Fonts
+     request in mkdocs.yml extra_css; these vars feed Material's stacks */
+  --md-text-font: "DM Sans";
+  --md-code-font: "DM Mono";
 
   /* Material custom primary/accent (palette: custom in mkdocs.yml) */
   --md-primary-fg-color:        var(--copper);
@@ -312,8 +317,8 @@ body,
 }
 
 .md-typeset h1.hero-title {
-  font-size: clamp(2.6rem, 6vw, 3.8rem);
-  line-height: 1.05;
+  font-size: clamp(2.8rem, 7vw, 4.6rem);
+  line-height: 1.02;
   margin: 0 0 1.1rem;
 }
 
@@ -325,44 +330,53 @@ body,
   margin: 0 0 1.9rem;
 }
 
-.hero-stats {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 0.75rem;
-  max-width: 46rem;
-  margin: 0 0 1.9rem;
-}
-
-.stat-tile {
+/* One ledger line instead of stat tiles: this is a journal, so the
+   facts read as a log entry — tiny mono against the enormous serif. */
+.md-typeset .hero-facts {
   display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-  background-color: var(--glass);
-  border: 1px solid var(--line-soft);
-  border-radius: 12px;
-  padding: 0.95rem 1.1rem;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.20);
-}
-
-.stat-value {
-  font-family: 'DM Sans', system-ui, sans-serif;
-  font-size: 1.35rem;
-  font-weight: 600;
-  line-height: 1;
-  color: var(--cream);
-}
-
-.stat-value--accent {
-  color: var(--copper);
-}
-
-.stat-label {
+  flex-wrap: wrap;
+  align-items: baseline;
+  row-gap: 0.5rem;
   font-family: 'DM Mono', Menlo, monospace;
-  font-size: 0.6rem;
+  font-size: 0.68rem;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.14em;
   color: var(--cream-faint);
+  border-top: 1px solid var(--line-soft);
+  border-bottom: 1px solid var(--line-soft);
+  padding: 0.85rem 0;
+  margin: 0 0 1.9rem;
+}
+
+.fact {
+  white-space: nowrap;
+}
+
+.fact + .fact::before {
+  content: "·";
+  color: var(--copper);
+  margin: 0 1.1rem;
+}
+
+.fact-num {
+  color: var(--cream);
+}
+
+.fact-num--accent {
+  color: var(--copper);
+}
+
+@media (max-width: 540px) {
+  .md-typeset .hero-facts {
+    flex-direction: column;
+    row-gap: 0.45rem;
+  }
+
+  .fact + .fact::before {
+    content: "";
+    margin: 0;
+  }
 }
 
 .hero-actions {
@@ -389,14 +403,14 @@ body,
 
 .md-typeset a.btn-solid {
   background-color: var(--copper);
-  color: #171c21;
+  color: var(--ink);
   border: 1px solid transparent;
 }
 
 .md-typeset a.btn-solid:hover,
 .md-typeset a.btn-solid:focus {
   background-color: var(--copper-light);
-  color: #171c21;
+  color: var(--ink);
   transform: translateY(-1px);
 }
 
@@ -424,13 +438,9 @@ body,
 /* ── Certification cards ── */
 .cert-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 0.9rem;
-  margin: 1.5rem 0 1rem;
-}
-
-@media (max-width: 900px) {
-  .cert-grid { grid-template-columns: repeat(2, 1fr); }
+  margin: 1.5rem 0 0.9rem;
 }
 
 @media (max-width: 540px) {
@@ -460,9 +470,25 @@ body,
   box-shadow: var(--shadow-card);
 }
 
-.cert-card--progress {
-  border-style: dashed;
-  border-color: rgba(201, 107, 58, 0.35);
+/* In-progress strip: one slim dashed ledger row under the earned grid */
+.md-typeset .cert-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.4rem 1.25rem;
+  border: 1px dashed rgba(201, 107, 58, 0.35);
+  border-radius: 14px;
+  padding: 0.9rem 1.25rem;
+  margin: 0 0 1rem;
+}
+
+.cert-strip-label {
+  font-size: 0.9rem;
+  color: var(--cream-soft);
+}
+
+.cert-strip-src {
+  color: var(--cream-faint);
 }
 
 .cert-kicker {

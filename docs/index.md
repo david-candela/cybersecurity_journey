@@ -10,12 +10,12 @@ hide:
   <h1 class="hero-title">Cybersecurity Journey</h1>
   <p class="hero-lede">Transitioning into cybersecurity with a blue team plus AI security focus — after thirteen years at Apple. This is the working record: the labs, the write-ups, and everything learned along the way.</p>
 
-  <div class="hero-stats">
-    <div class="stat-tile"><span class="stat-value">13+</span><span class="stat-label">Years in tech</span></div>
-    <div class="stat-tile"><span class="stat-value">3</span><span class="stat-label">Certifications</span></div>
-    <div class="stat-tile"><span class="stat-value stat-value--accent">Top&nbsp;8%</span><span class="stat-label">TryHackMe global</span></div>
-    <div class="stat-tile"><span class="stat-value">3</span><span class="stat-label">Projects shipped</span></div>
-  </div>
+  <p class="hero-facts">
+    <span class="fact"><span class="fact-num">13+</span> years in tech</span>
+    <span class="fact"><span class="fact-num">3</span> certifications</span>
+    <span class="fact"><span class="fact-num fact-num--accent">Top&nbsp;8%</span> TryHackMe global</span>
+    <span class="fact"><span class="fact-num">3</span> projects shipped</span>
+  </p>
 
   <div class="hero-actions">
     <a class="btn btn-solid" href="cv/">View CV</a>
@@ -127,18 +127,11 @@ hide:
     <span class="cert-verify">Verify on Credly ↗</span>
   </a>
 
-  <div class="cert-card cert-card--progress" data-animate>
-    <span class="cert-kicker"><span class="cert-live-dot"></span>In progress</span>
-    <span class="cert-title">SEC1 · Cyber Security 101</span>
-    <span class="cert-desc">TryHackMe certification path, fundamentals under exam conditions.</span>
-  </div>
+</div>
 
-  <div class="cert-card cert-card--progress" data-animate>
-    <span class="cert-kicker"><span class="cert-live-dot"></span>In progress</span>
-    <span class="cert-title">SAL1 · SOC Analyst Level 1</span>
-    <span class="cert-desc">TryHackMe SOC certification — triage and investigation in practice.</span>
-  </div>
-
+<div class="cert-strip" data-animate>
+  <span class="cert-kicker"><span class="cert-live-dot"></span>In progress</span>
+  <span class="cert-strip-label">SEC1 · Cyber Security 101 &nbsp;+&nbsp; SAL1 · SOC Analyst Level 1 <span class="cert-strip-src">· TryHackMe</span></span>
 </div>
 
 <p class="section-kicker">Toolkit</p>
