@@ -1,58 +1,76 @@
+/* ═══════════════════════════════════════════════════════════
+   Night Register — dark ink + copper, unified with /showcase/
+   Tokens mirror docs/showcase/index.html (see DESIGN.md v2)
+   ═══════════════════════════════════════════════════════════ */
+
 /* ── Colour palette ── */
 :root {
-  --cream:          #FAF7F2;
-  --cream-mid:      #F0EBE1;
-  --cream-border:   #DDD5C8;
-  --charcoal:       #2C2C2C;
-  --charcoal-soft:  #4A4A4A;
-  --charcoal-deep:  #1E1E1E;
-  --orange:         #C96B3A;   /* Harvest Mark — decorative accent (icons, borders, indicators) */
-  --orange-light:   #D4845A;   /* Harvest Mark Light — hover states */
-  --orange-dark:    #A5522B;   /* Harvest Mark Deep — text on cream, 4.69:1 AA compliant */
-  --orange-deep:    #8A3E1A;   /* Harvest Mark — code text on cream-mid, 6.41:1 AA compliant */
-  --ease-standard:  cubic-bezier(0.2, 0, 0, 1); /* ease-out-quart */
+  --ink:            #171c21;   /* page background, same as showcase */
+  --ink-raise:      #1d242b;   /* raised surfaces: search dropdown, dots */
+  --ink-deep:       #10151a;   /* header, footer, code blocks */
+  --cream:          #f2ede7;   /* primary text, same as showcase */
+  --cream-soft:     rgba(242, 237, 231, 0.72);
+  --cream-faint:    rgba(242, 237, 231, 0.48);
+  --line:           rgba(242, 237, 231, 0.10);  /* structural borders */
+  --line-soft:      rgba(255, 255, 255, 0.07);  /* card borders at rest */
+  --glass:          rgba(255, 255, 255, 0.04);  /* card fill */
+  --glass-strong:   rgba(255, 255, 255, 0.07);  /* ghost button fill */
+  --copper:         #C96B3A;   /* Harvest Mark — the one voice */
+  --copper-light:   #D4845A;   /* links on ink, 5.6:1 AA */
+  --copper-bright:  #E8B08A;   /* link hover on ink */
+  --copper-tint:    rgba(201, 107, 58, 0.10);
+  --copper-edge:    rgba(201, 107, 58, 0.50);   /* hover borders */
+  --shadow-card:    0 14px 32px rgba(0, 0, 0, 0.35);
+  --ease-standard:  cubic-bezier(0.2, 0, 0, 1);
+
+  /* Material custom primary/accent (palette: custom in mkdocs.yml) */
+  --md-primary-fg-color:        var(--copper);
+  --md-primary-fg-color--light: var(--copper-light);
+  --md-primary-fg-color--dark:  #A5522B;
+  --md-primary-bg-color:        var(--cream);
+  --md-primary-bg-color--light: rgba(242, 237, 231, 0.7);
+  --md-accent-fg-color:         var(--copper-light);
+  --md-accent-fg-color--transparent: rgba(201, 107, 58, 0.15);
+  --md-accent-bg-color:         var(--cream);
+  --md-accent-bg-color--light:  rgba(242, 237, 231, 0.7);
 }
 
 /* ── Override Material slate scheme ── */
 [data-md-color-scheme="slate"] {
-  --md-default-bg-color:           var(--cream);
-  --md-default-bg-color--light:    var(--cream);
-  --md-default-bg-color--lighter:  #FFFFFF;
-  --md-default-bg-color--lightest: #FFFFFF;
-  --md-default-fg-color:           var(--charcoal);
-  --md-default-fg-color--light:    rgba(44, 44, 44, 0.75);
-  --md-default-fg-color--lighter:  rgba(44, 44, 44, 0.45);
-  --md-default-fg-color--lightest: rgba(44, 44, 44, 0.15);
-  --md-primary-fg-color:           var(--orange);
-  --md-primary-fg-color--light:    var(--orange-light);
-  --md-primary-fg-color--dark:     var(--orange-dark);
-  --md-primary-bg-color:           #FFFFFF;
-  --md-primary-bg-color--light:    rgba(255, 255, 255, 0.7);
-  --md-accent-fg-color:            var(--orange);
-  --md-accent-fg-color--transparent: rgba(201, 107, 58, 0.1);
-  --md-accent-bg-color:            #FFFFFF;
-  --md-typeset-color:              var(--charcoal);
-  --md-typeset-a-color:            var(--orange-dark);
-  --md-code-bg-color:              var(--cream-mid);
-  --md-code-fg-color:              var(--charcoal);
+  --md-default-bg-color:           var(--ink);
+  --md-default-bg-color--light:    var(--ink-raise);
+  --md-default-bg-color--lighter:  var(--ink-raise);
+  --md-default-bg-color--lightest: #232b33;
+  --md-default-fg-color:           var(--cream);
+  --md-default-fg-color--light:    var(--cream-soft);
+  --md-default-fg-color--lighter:  var(--cream-faint);
+  --md-default-fg-color--lightest: rgba(242, 237, 231, 0.14);
+  --md-typeset-color:              var(--cream-soft);
+  --md-typeset-a-color:            var(--copper-light);
+  --md-code-bg-color:              var(--ink-deep);
+  --md-code-fg-color:              var(--cream-soft);
   --md-code-hl-color:              rgba(201, 107, 58, 0.15);
-  --md-shadow-z1: 0 0.2rem 0.5rem rgba(0,0,0,0.06), 0 0 0.05rem rgba(0,0,0,0.12);
-  --md-shadow-z2: 0 0.4rem 1rem  rgba(0,0,0,0.08), 0 0 0.1rem  rgba(0,0,0,0.1);
-  --md-shadow-z3: 0 0.8rem 2rem  rgba(0,0,0,0.10), 0 0 0.1rem  rgba(0,0,0,0.1);
+  --md-footer-bg-color:            var(--ink-deep);
+  --md-footer-bg-color--dark:      #0c1014;
+  --md-footer-fg-color:            var(--cream-soft);
+  --md-footer-fg-color--light:     var(--cream-faint);
+  --md-shadow-z1: 0 0.2rem 0.6rem rgba(0,0,0,0.30), 0 0 0.05rem rgba(0,0,0,0.35);
+  --md-shadow-z2: 0 0.5rem 1.2rem rgba(0,0,0,0.40), 0 0 0.1rem  rgba(0,0,0,0.35);
+  --md-shadow-z3: 0 0.8rem 2rem  rgba(0,0,0,0.45), 0 0 0.1rem  rgba(0,0,0,0.35);
 }
 
 /* ── Typography ── */
 body,
 .md-typeset {
-  font-family: 'DM Sans', sans-serif;
-  color: var(--charcoal);
+  font-family: 'DM Sans', system-ui, sans-serif;
 }
 
 .md-typeset h1,
 .md-typeset h2 {
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
-  color: var(--charcoal);
+  font-family: 'Fraunces', Georgia, serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  color: var(--cream);
   letter-spacing: -0.01em;
 }
 
@@ -60,30 +78,28 @@ body,
 .md-typeset h4,
 .md-typeset h5,
 .md-typeset h6 {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'DM Sans', system-ui, sans-serif;
   font-weight: 600;
-  color: var(--charcoal);
+  color: var(--cream);
 }
 
-/* ── Layout backgrounds ── */
-.md-main,
-.md-main__inner,
-.md-content,
-.md-content__inner {
-  background-color: var(--cream);
+/* ── Links ── */
+.md-typeset a {
+  color: var(--copper-light);
 }
 
-.md-sidebar,
-.md-sidebar__scrollwrap,
-.md-sidebar__inner {
-  background-color: var(--cream);
+.md-typeset a:hover,
+.md-typeset a:focus {
+  color: var(--copper-bright);
 }
 
 /* ── Header ── */
 .md-header {
-  background-color: var(--charcoal);
+  background-color: rgba(23, 28, 33, 0.92);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
   color: var(--cream);
-  box-shadow: 0 1px 0 rgba(201, 107, 58, 0.3);
+  box-shadow: 0 1px 0 rgba(201, 107, 58, 0.25);
 }
 
 .md-header__title {
@@ -92,12 +108,12 @@ body,
 
 /* ── Navigation tabs ── */
 .md-tabs {
-  background-color: var(--charcoal);
-  border-bottom: 1px solid rgba(201, 107, 58, 0.25);
+  background-color: rgba(23, 28, 33, 0.92);
+  border-bottom: 1px solid var(--line-soft);
 }
 
 .md-tabs__link {
-  color: rgba(250, 247, 242, 0.7);
+  color: var(--cream-faint);
 }
 
 .md-tabs__link--active,
@@ -106,142 +122,297 @@ body,
 }
 
 .md-tabs__indicator {
-  background-color: var(--orange);
+  background-color: var(--copper);
 }
 
 /* ── Sidebar navigation ── */
 .md-nav__title {
-  color: var(--charcoal);
+  color: var(--cream);
   font-weight: 600;
+  background-color: transparent !important;
+  box-shadow: none !important;
 }
 
 .md-nav__link {
-  color: var(--charcoal-soft);
+  color: var(--cream-soft);
 }
 
 .md-nav__link:hover,
 .md-nav__link:focus {
-  color: var(--orange);
+  color: var(--copper-light);
 }
 
-.md-nav__item--active > .md-nav__link {
-  color: var(--orange);
+.md-nav__item--active > .md-nav__link,
+.md-nav__link--active {
+  color: var(--copper-light);
   font-weight: 500;
 }
 
 /* ── Footer ── */
 .md-footer {
-  background-color: var(--charcoal);
-  color: rgba(250, 247, 242, 0.7);
+  background-color: var(--md-footer-bg-color);
+  color: var(--cream-soft);
 }
 
 .md-footer-meta {
-  background-color: var(--charcoal-deep);
-}
-
-/* ── Links — #A5522B achieves 4.69:1 on cream (AA pass) ── */
-.md-typeset a {
-  color: var(--orange-dark);
-}
-
-.md-typeset a:hover {
-  color: var(--orange-deep);
+  background-color: var(--md-footer-bg-color--dark);
 }
 
 /* ── Horizontal rules ── */
 .md-typeset hr {
   border: none;
-  border-top: 1px solid rgba(201, 107, 58, 0.35);
+  border-top: 1px solid var(--line);
   margin: 2rem 0;
 }
 
 /* ── Tables ── */
 .md-typeset table:not([class]) {
-  border: 1px solid var(--cream-border);
-  border-radius: 8px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background-color: var(--glass);
   max-width: 100%;
-  /* overflow:hidden removed — it prevented horizontal scroll on narrow viewports;
-     border-radius renders correctly without it in all modern browsers */
 }
 
 .md-typeset table:not([class]) th {
-  background-color: var(--cream-mid);
-  color: var(--charcoal);
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--cream);
   font-weight: 600;
-  border-bottom: 1px solid var(--cream-border);
+  border-bottom: 1px solid var(--line);
 }
 
 .md-typeset table:not([class]) td {
-  border-color: var(--cream-border);
-  color: var(--charcoal);
+  border-color: var(--line-soft);
+  color: var(--cream-soft);
 }
 
 .md-typeset table:not([class]) tr:hover {
-  background-color: rgba(201, 107, 58, 0.05);
+  background-color: rgba(201, 107, 58, 0.06);
 }
 
 /* ── Code ── */
 .md-typeset code {
-  background-color: var(--cream-mid);
-  color: var(--orange-deep);  /* #8A3E1A, 6.41:1 on cream-mid (AA pass) */
+  background-color: rgba(255, 255, 255, 0.06);
+  color: var(--copper-light);  /* 5.6:1 on ink (AA) */
   border-radius: 4px;
 }
 
 .md-typeset pre > code {
-  color: var(--charcoal);
+  color: var(--cream-soft);
 }
 
 .md-typeset .highlight pre,
 .md-typeset pre {
-  background-color: var(--cream-mid);
+  background-color: var(--ink-deep);
 }
 
-/* ── Admonitions ── */
+.md-typeset .highlight,
+.md-typeset pre {
+  border-radius: 10px;
+}
+
+/* ── Admonitions ──
+   One Voice Rule: every admonition type is repainted copper; the typed
+   selectors (.info, .tip…) carry their own colors, hence !important. */
 .md-typeset .admonition,
 .md-typeset details {
-  border-left-color: var(--orange);
-  background-color: rgba(201, 107, 58, 0.06);
+  border-color: var(--copper) !important;
+  background-color: var(--glass);
+  color: var(--cream-soft);
 }
 
 .md-typeset .admonition-title,
 .md-typeset summary {
-  background-color: rgba(201, 107, 58, 0.12);
-  color: var(--orange-dark);
+  background-color: rgba(201, 107, 58, 0.12) !important;
+  color: var(--copper-light) !important;
 }
 
 .md-typeset .admonition-title::before,
 .md-typeset summary::before {
-  color: var(--orange);
+  background-color: var(--copper) !important;
+}
+
+/* ── Content images (write-up screenshots) ── */
+.md-typeset img {
+  border-radius: 8px;
 }
 
 /* ── Search ── */
 .md-search__input {
-  background-color: rgba(255, 255, 255, 0.12);
+  background-color: rgba(255, 255, 255, 0.08);
   color: var(--cream);
 }
 
 .md-search__input::placeholder {
-  color: rgba(250, 247, 242, 0.5);
+  color: var(--cream-faint);
+}
+
+.md-search__form:hover {
+  background-color: rgba(255, 255, 255, 0.12);
 }
 
 .md-search-result {
-  background-color: var(--cream);
+  background-color: var(--ink-raise);
 }
 
 .md-search-result__article {
-  background-color: var(--cream);
+  background-color: var(--ink-raise);
+}
+
+.md-search-result__meta {
+  background-color: var(--ink-deep);
+  color: var(--cream-faint);
+}
+
+/* ── Text selection ── */
+::selection {
+  background-color: rgba(201, 107, 58, 0.35);
 }
 
 /* ─────────────────────────────────────────
    CUSTOM COMPONENTS
    ───────────────────────────────────────── */
 
-/* ── Certification Grid ── */
+/* ── Kickers (section eyebrows, DM Mono voice) ── */
+.section-kicker,
+.hero-kicker {
+  font-family: 'DM Mono', Menlo, monospace;
+  font-size: 0.68rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--copper);
+}
+
+.md-typeset .section-kicker {
+  margin: 3.2rem 0 0;
+}
+
+.md-typeset .section-kicker + h2 {
+  margin-top: 0.3em;
+}
+
+/* ── Hero ── */
+.md-typeset .hero {
+  padding: 2.8rem 0 1.2rem;
+}
+
+.md-typeset .hero-kicker {
+  margin: 0 0 0.9rem;
+}
+
+.md-typeset h1.hero-title {
+  font-size: clamp(2.6rem, 6vw, 3.8rem);
+  line-height: 1.05;
+  margin: 0 0 1.1rem;
+}
+
+.md-typeset .hero-lede {
+  font-size: 1.02rem;
+  line-height: 1.65;
+  color: var(--cream-soft);
+  max-width: 38rem;
+  margin: 0 0 1.9rem;
+}
+
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.75rem;
+  max-width: 46rem;
+  margin: 0 0 1.9rem;
+}
+
+.stat-tile {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  background-color: var(--glass);
+  border: 1px solid var(--line-soft);
+  border-radius: 12px;
+  padding: 0.95rem 1.1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.20);
+}
+
+.stat-value {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--cream);
+}
+
+.stat-value--accent {
+  color: var(--copper);
+}
+
+.stat-label {
+  font-family: 'DM Mono', Menlo, monospace;
+  font-size: 0.6rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--cream-faint);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+/* ── Buttons ── */
+.md-typeset .btn {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.62rem 1.5rem;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s var(--ease-standard),
+              border-color 0.2s var(--ease-standard),
+              transform 0.2s var(--ease-standard);
+}
+
+.md-typeset a.btn-solid {
+  background-color: var(--copper);
+  color: #171c21;
+  border: 1px solid transparent;
+}
+
+.md-typeset a.btn-solid:hover,
+.md-typeset a.btn-solid:focus {
+  background-color: var(--copper-light);
+  color: #171c21;
+  transform: translateY(-1px);
+}
+
+.md-typeset a.btn-ghost {
+  background-color: var(--glass-strong);
+  color: var(--cream);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.md-typeset a.btn-ghost:hover,
+.md-typeset a.btn-ghost:focus {
+  border-color: var(--copper-edge);
+  background-color: var(--copper-tint);
+  color: var(--cream);
+  transform: translateY(-1px);
+}
+
+.md-typeset .btn:focus-visible {
+  outline: 2px solid var(--copper);
+  outline-offset: 2px;
+}
+
+/* ── Certification cards ── */
 .cert-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
-  justify-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.9rem;
   margin: 1.5rem 0 1rem;
 }
 
@@ -249,29 +420,79 @@ body,
   .cert-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 540px) {
   .cert-grid { grid-template-columns: 1fr; }
 }
 
-.cert-card {
-  background-color: var(--cream);
-  border: 1px solid var(--cream-border);
-  border-radius: 12px;
-  padding: 1rem;
+.md-typeset a.cert-card,
+.md-typeset .cert-card {
   display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  background-color: var(--glass);
+  border: 1px solid var(--line-soft);
+  border-radius: 14px;
+  padding: 1.15rem 1.25rem;
+  text-decoration: none;
+  color: var(--cream-soft);
+  transition: border-color 0.2s var(--ease-standard),
+              transform 0.2s var(--ease-standard),
+              box-shadow 0.2s var(--ease-standard);
+}
+
+.md-typeset a.cert-card:hover,
+.md-typeset a.cert-card:focus {
+  border-color: var(--copper-edge);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card);
+}
+
+.cert-card--progress {
+  border-style: dashed;
+  border-color: rgba(201, 107, 58, 0.35);
+}
+
+.cert-kicker {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  transition: box-shadow 0.2s var(--ease-standard), border-color 0.2s var(--ease-standard);
-  width: 100%;
-  min-height: 290px; /* Reserve space for Credly embed (150x270 + 2×1rem padding) */
+  font-family: 'DM Mono', Menlo, monospace;
+  font-size: 0.62rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--copper);
 }
 
-.cert-card:hover {
-  border-color: rgba(201, 107, 58, 0.4);
-  box-shadow: 0 0.2rem 0.5rem rgba(0,0,0,0.06), 0 0 0.05rem rgba(0,0,0,0.12);
+.cert-live-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--copper);
+  margin-right: 0.45rem;
+  animation: milestone-pulse 2s ease-in-out infinite;
 }
 
-/* ── Skill Pills ── */
+.cert-title {
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: var(--cream);
+  line-height: 1.3;
+}
+
+.cert-desc {
+  font-size: 0.84rem;
+  line-height: 1.5;
+  color: var(--cream-faint);
+}
+
+.cert-verify {
+  margin-top: 0.35rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--copper-light);
+}
+
+/* ── Skill pills ── */
 .skill-pills {
   display: flex;
   flex-wrap: wrap;
@@ -281,35 +502,68 @@ body,
 
 .skill-pill {
   display: inline-block;
-  background-color: var(--cream-mid);
-  color: var(--charcoal);
-  border: 1px solid var(--cream-border);
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--cream-soft);
+  border: 1px solid var(--line);
   border-radius: 999px;
   padding: 0.3rem 0.9rem;
   font-size: 0.85em;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'DM Sans', system-ui, sans-serif;
   font-weight: 500;
   white-space: nowrap;
-  transition: background-color 0.15s var(--ease-standard), border-color 0.15s var(--ease-standard);
+  transition: background-color 0.15s var(--ease-standard),
+              border-color 0.15s var(--ease-standard),
+              color 0.15s var(--ease-standard);
 }
 
 .skill-pill:hover {
-  background-color: rgba(201, 107, 58, 0.1);
-  border-color: rgba(201, 107, 58, 0.4);
+  background-color: var(--copper-tint);
+  border-color: var(--copper-edge);
+  color: var(--cream);
 }
 
 .skill-group-label {
-  font-family: 'DM Sans', sans-serif !important;
-  font-size: 0.78em !important;
-  font-weight: 600 !important;
+  font-family: 'DM Mono', Menlo, monospace !important;
+  font-size: 0.66rem !important;
+  font-weight: 500 !important;
   text-transform: uppercase;
-  letter-spacing: 0.09em;
-  color: var(--orange) !important;
+  letter-spacing: 0.14em;
+  color: var(--copper-light) !important;
   margin: 1.25rem 0 0 !important;
   padding: 0 !important;
 }
 
-/* ── CV Header Link ── */
+/* ── Connect row ── */
+.connect-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1.25rem 0 1.5rem;
+}
+
+.md-typeset a.connect-link {
+  display: inline-flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.5rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--cream);
+  text-decoration: none;
+  transition: border-color 0.2s var(--ease-standard),
+              background-color 0.2s var(--ease-standard);
+}
+
+.md-typeset a.connect-link:hover,
+.md-typeset a.connect-link:focus {
+  border-color: var(--copper-edge);
+  background-color: var(--copper-tint);
+  color: var(--cream);
+}
+
+/* ── CV header link ── */
 .cv-header-link {
   display: inline-flex;
   align-items: center;
@@ -321,20 +575,21 @@ body,
   font-weight: 600;
   letter-spacing: 0.03em;
   border: 1px solid rgba(201, 107, 58, 0.55);
-  border-radius: 4px;
+  border-radius: 999px;
   text-decoration: none !important;
   white-space: nowrap;
-  transition: border-color 0.2s var(--ease-standard), background-color 0.2s var(--ease-standard);
+  transition: border-color 0.2s var(--ease-standard),
+              background-color 0.2s var(--ease-standard);
 }
 
 .cv-header-link:hover {
-  border-color: var(--orange);
+  border-color: var(--copper);
   background-color: rgba(201, 107, 58, 0.18);
   color: var(--cream) !important;
 }
 
 .cv-header-link:focus-visible {
-  outline: 2px solid var(--orange);
+  outline: 2px solid var(--copper);
   outline-offset: 2px;
 }
 
@@ -342,12 +597,12 @@ body,
   .cv-header-link { display: none; }
 }
 
-/* ── TryHackMe Badge Card ── */
+/* ── TryHackMe badge card ── */
 .thm-badge-card {
   display: inline-block;
-  background-color: var(--cream-mid);
-  border: 1px solid var(--cream-border);
-  border-radius: 12px;
+  background-color: var(--glass);
+  border: 1px solid var(--line-soft);
+  border-radius: 14px;
   padding: 1.25rem 1.75rem;
   margin: 0.75rem 0 1rem;
   text-align: center;
@@ -357,10 +612,10 @@ body,
   display: block;
   max-width: 100%;
   height: auto;
-  border-radius: 4px;
+  border-radius: 6px;
 }
 
-/* ── Milestone Timeline ── */
+/* ── Milestone timeline ── */
 .milestone-timeline {
   position: relative;
   margin: 1.5rem 0 2rem;
@@ -374,7 +629,7 @@ body,
   top: 0.5rem;
   bottom: 0.5rem;
   width: 2px;
-  background-color: var(--cream-border);
+  background-color: var(--line);
 }
 
 .milestone-item {
@@ -382,7 +637,7 @@ body,
   display: flex;
   align-items: flex-start;
   gap: 0.75rem;
-  margin-bottom: 1.1rem;
+  margin-bottom: 1.15rem;
 }
 
 .milestone-dot {
@@ -392,14 +647,14 @@ body,
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: var(--cream-mid);
-  border: 2px solid var(--cream-border);
+  background-color: var(--ink-raise);
+  border: 2px solid rgba(242, 237, 231, 0.22);
   flex-shrink: 0;
 }
 
 .milestone-dot--current {
-  background-color: var(--orange);
-  border-color: var(--orange);
+  background-color: var(--copper);
+  border-color: var(--copper);
   animation: milestone-pulse 2s ease-in-out infinite;
 }
 
@@ -411,51 +666,71 @@ body,
 .milestone-content {
   display: flex;
   flex-direction: column;
-  gap: 0.05rem;
+  gap: 0.15rem;
 }
 
-/* Without JS: immediately visible. With JS: starts hidden, fades in. */
-.milestone-content[data-animate]:not([data-visible]) {
-  opacity: 0;
-  transform: translateX(-8px);
-  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+.milestone-meta {
+  display: flex;
+  align-items: baseline;
+  gap: 0.7rem;
 }
 
-.milestone-content[data-animate][data-visible] {
+.milestone-tag,
+.milestone-date {
+  font-family: 'DM Mono', Menlo, monospace;
+  font-size: 0.6rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+.milestone-tag {
+  color: var(--copper-light);
+}
+
+.milestone-tag--now {
+  color: var(--copper);
+}
+
+.milestone-date {
+  color: var(--cream-faint);
+}
+
+.milestone-label {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 0.94rem;
+  color: var(--cream-soft);
+  line-height: 1.45;
+}
+
+.milestone-current .milestone-label {
+  color: var(--cream);
+}
+
+/* ── Scroll-in animation (progressive: only when JS can run) ── */
+@media (scripting: enabled) {
+  [data-animate]:not([data-visible]) {
+    opacity: 0;
+    transform: translateX(-8px);
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+  }
+}
+
+[data-animate][data-visible] {
   opacity: 1;
   transform: translateX(0);
   transition: opacity 0.3s ease-out, transform 0.3s ease-out;
 }
 
-.milestone-type-icon {
-  font-size: 0.85rem;
-  line-height: 1;
-  margin-bottom: 0.15rem;
-  color: var(--charcoal-soft);
-}
-
-.milestone-current .milestone-type-icon {
-  color: var(--orange);
-}
-
-.milestone-date {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.72rem;
-  font-weight: 600;
+/* ── Footnote line ── */
+.md-typeset .page-updated {
+  font-family: 'DM Mono', Menlo, monospace;
+  font-size: 0.64rem;
+  font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--charcoal-soft);
-}
-
-.milestone-current .milestone-date {
-  color: var(--orange);
-}
-
-.milestone-label {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.92rem;
-  color: var(--charcoal);
-  line-height: 1.4;
+  letter-spacing: 0.14em;
+  color: var(--cream-faint);
+  margin-top: 2.5rem;
 }
 
 /* ── Reduced motion ── */
@@ -468,12 +743,13 @@ body,
     transition-duration: 0.01ms !important;
   }
 
-  .milestone-dot--current {
+  .milestone-dot--current,
+  .cert-live-dot {
     animation: none;
   }
 
   /* Keep elements visible regardless of JS state */
-  .milestone-content[data-animate]:not([data-visible]) {
+  [data-animate]:not([data-visible]) {
     opacity: 1;
     transform: none;
     transition: none;
