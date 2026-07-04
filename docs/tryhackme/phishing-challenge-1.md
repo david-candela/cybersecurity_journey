@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | **Date Completed** | 27/01/2025 |
-| **Difficulty** | :green_circle: Easy |
+| **Difficulty** | <span class="diff-tag">Easy</span> |
 | **Room Link** | [tryhackme.com/room/snappedphishingline](https://tryhackme.com/room/snappedphishingline) |
 
 ---

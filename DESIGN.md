@@ -148,6 +148,8 @@ rgba(0,0,0,0.20)) because they sit inside the hero — that is the ceiling.
 - **Timeline:** hairline spine, ink-raise dots, copper pulsing dot for "now"; each entry =
   mono tag (CERT / STUDY / TOOLS / MILESTONE / NOW) + optional mono date + DM Sans label.
 - **Skill pills:** 5% white fill, hairline border, cream-soft text; copper tint on hover.
+- **Difficulty tags** (`.diff-tag`, write-up tables): DM Mono label voice in a hairline
+  pill, cream-faint. Neutral by design — no traffic-light colors (One Voice).
 - **Header/tabs:** rgba(23,28,33,0.92) with 12px backdrop blur, copper tab indicator,
   1px copper-tinted bottom rule.
 

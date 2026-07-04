@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | **Date Completed** | 15/04/2026 |
-| **Difficulty** | :green_circle: Easy |
+| **Difficulty** | <span class="diff-tag">Easy</span> |
 | **Room Link** | [tryhackme.com/room/mitre](https://tryhackme.com/room/mitre) |
 
 ---

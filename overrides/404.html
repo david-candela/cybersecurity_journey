@@ -1,0 +1,13 @@
+{% extends "main.html" %}
+
+{% block content %}
+<section class="hero">
+  <p class="hero-kicker">404 · Signal lost</p>
+  <h1 class="hero-title">Nothing at this address.</h1>
+  <p class="hero-lede">The page moved, or it never existed. Either way, the trail picks back up at the start.</p>
+  <div class="hero-actions">
+    <a class="btn btn-solid" href="{{ config.site_url }}">Back to the journal</a>
+    <a class="btn btn-ghost" href="{{ config.site_url }}showcase/">Portfolio home&nbsp;↗</a>
+  </div>
+</section>
+{% endblock %}

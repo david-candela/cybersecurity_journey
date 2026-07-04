@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | **Date Completed** | 26/04/2026 |
-| **Difficulty** | :green_circle: Easy |
+| **Difficulty** | <span class="diff-tag">Easy</span> |
 | **Room Link** | [tryhackme.com/room/blue](https://tryhackme.com/room/blue) |
 | **Learning Path** | CyberSecurity 101 |
 

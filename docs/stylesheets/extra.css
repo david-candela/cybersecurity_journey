@@ -263,6 +263,17 @@ body,
   color: var(--cream-faint);
 }
 
+/* ── Mobile drawer: repo block inherits primary (copper) — repaint ink ── */
+.md-nav__source {
+  background-color: var(--ink-deep) !important;
+  color: var(--cream-soft);
+}
+
+/* ── Header repo widget: hide star/fork counts, keep the name ── */
+.md-source__facts {
+  display: none;
+}
+
 /* ── Text selection ── */
 ::selection {
   background-color: rgba(201, 107, 58, 0.35);
@@ -403,7 +414,9 @@ body,
   transform: translateY(-1px);
 }
 
-.md-typeset .btn:focus-visible {
+.md-typeset .btn:focus-visible,
+.md-typeset a.cert-card:focus-visible,
+.md-typeset a.connect-link:focus-visible {
   outline: 2px solid var(--copper);
   outline-offset: 2px;
 }
@@ -490,6 +503,21 @@ body,
   font-size: 0.78rem;
   font-weight: 600;
   color: var(--copper-light);
+}
+
+/* ── Difficulty tag (write-up tables) ── */
+.diff-tag {
+  display: inline-block;
+  font-family: 'DM Mono', Menlo, monospace;
+  font-size: 0.62rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--cream-faint);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.14rem 0.6rem;
+  white-space: nowrap;
 }
 
 /* ── Skill pills ── */

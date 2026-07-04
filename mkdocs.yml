@@ -5,6 +5,7 @@ site_url: https://david-candela.github.io/cybersecurity_journey/
 
 theme:
   name: material
+  custom_dir: overrides
   palette:
     scheme: slate
     primary: custom
